@@ -1,0 +1,171 @@
+/* Global body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('./nature.jpeg');
+  background-size: cover; /* Ensures the background image covers the entire page */
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Container for the login and product management page */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  text-decoration: none;
+  position: relative;
+}
+
+/* Main heading style */
+h1 {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5f6368; /* Softer gray */
+}
+
+/* Styling for input fields */
+input {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9b59b6; /* Adds a focus border color */
+  background-color: #fff;
+}
+
+/* Styling for buttons */
+button {
+  padding: 12px 20px;
+  background-color: #9b59b6; /* Purple color for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e44ad; /* Slightly darker purple on hover */
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #9b59b6;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* For lists (removes default list style) */
+ul {
+  list-style-type: none;
+}
+
+/* Product item styles */
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-item:last-child {
+  border-bottom: none; /* Removes border from the last item */
+}
+
+/* Product Table Styling */
+#product-table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#product-table th,
+#product-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#product-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #5f6368;
+  text-transform: uppercase;
+}
+
+#product-table td {
+  background-color: #f9f9f9;
+}
+
+/* Button style in the table */
+#product-table button {
+  background-color: #e74c3c; /* Red button for delete */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#product-table button:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+/* Make the table responsive */
+@media (max-width: 768px) {
+  #product-table {
+    font-size: 0.9rem;
+  }
+
+  input,
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Background image and overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  z-index: -1;
+}
